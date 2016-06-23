@@ -7,7 +7,7 @@ For Mac OS X 10.11
 git clone https://github.com/t-sullivan/dotfiles.git && cd dotfiles && source symlink.sh
 ```
 
-To update dotfiles in ~/, `cd` into your local `dotfiles` repository and then:
+To update dotfiles in `~`, `cd` into your local `dotfiles` repository and then:
 
 ```bash
 source symlink.sh
@@ -25,7 +25,7 @@ source symlink.sh
 ./.osx
 ```
 
-### Configure zsh and install __Oh My Zsh__
+### Configure zsh and install _Oh My Zsh_
 
 ```bash
 ./config_shell.sh
