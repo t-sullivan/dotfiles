@@ -9,8 +9,7 @@ alias .....="cd ../../../.."
 # Shortcuts
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
-alias g="git"
+alias dv="cd ~/Development"
 alias h="history"
 alias j="jobs"
 

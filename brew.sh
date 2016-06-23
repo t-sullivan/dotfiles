@@ -2,6 +2,17 @@
 
 # Install command-line tools using Homebrew.
 
+# Check if Homebrew is installed. If not, install it.
+if test ! $(which brew)
+then
+  echo "  Installing Homebrew for you."
+
+  if test "$(uname)" = "Darwin"
+  then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+fi
+
 # Make sure we’re using the latest Homebrew.
 brew update
 
@@ -20,25 +31,22 @@ brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
 brew install gnu-sed --with-default-names
 # Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
 brew install bash
-
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
-  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
-  chsh -s /usr/local/bin/bash;
-fi;
+# Add Bash path to `/etc/shells`.
+sudo bash -c "which bash >> /etc/shells"
+# Install Zsh.
+brew install zsh
+# Add Zsh path to `/etc/shells`.
+sudo bash -c "which zsh >> /etc/shells"
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
+brew install vim --with-override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php56 --with-gmp
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -46,7 +54,7 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
-# Install some CTF tools; see https://github.com/ctfs/write-ups.
+# Install some CTF tools.
 brew install fcrackzip
 brew install foremost
 brew install john
@@ -64,6 +72,16 @@ brew install p7zip
 brew install tree
 brew install vbindiff
 brew install webkit2png
+
+# Install casks.
+brew tap caskroom/cask
+brew cask install google-chrome
+brew cask install firefox
+brew cask install iterm2
+brew cask install sublime-text
+brew cask install vlc
+brew cask install virtualbox
+brew cask install osxfuse
 
 # Remove outdated versions from the cellar.
 brew cleanup
