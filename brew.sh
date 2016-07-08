@@ -54,6 +54,10 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
+# Install video tools.
+brew install ffmpeg
+brew install mkvtoolsnix
+
 # Install some CTF tools.
 brew install fcrackzip
 brew install foremost
