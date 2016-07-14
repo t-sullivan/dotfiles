@@ -56,7 +56,7 @@ brew install woff2
 
 # Install video tools.
 brew install ffmpeg
-brew install mkvtoolsnix
+brew install mkvtoolnix
 
 # Install some CTF tools.
 brew install fcrackzip
