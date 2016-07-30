@@ -86,6 +86,8 @@ brew cask install sublime-text
 brew cask install vlc
 brew cask install virtualbox
 brew cask install osxfuse
+brew cask install karabiner
+brew cask install seil
 
 # Remove outdated versions from the cellar.
 brew cleanup
