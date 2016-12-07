@@ -34,9 +34,9 @@ brew install gnu-sed --with-default-names
 brew install bash
 # Add Bash path to `/etc/shells`.
 sudo bash -c "which bash >> /etc/shells"
-# Install Zsh.
+# Install zsh.
 brew install zsh
-# Add Zsh path to `/etc/shells`.
+# Add zsh path to `/etc/shells`.
 sudo bash -c "which zsh >> /etc/shells"
 
 # Install `wget` with IRI support.
@@ -47,12 +47,6 @@ brew install vim --with-override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-
-# Install font tools.
-brew tap bramstein/webfonttools
-brew install sfnt2woff
-brew install sfnt2woff-zopfli
-brew install woff2
 
 # Install video tools.
 brew install ffmpeg
@@ -83,11 +77,9 @@ brew cask install google-chrome
 brew cask install firefox
 brew cask install iterm2
 brew cask install sublime-text
+brew cask install visual-studio-code
 brew cask install vlc
-brew cask install virtualbox
 brew cask install osxfuse
-brew cask install karabiner
-brew cask install seil
 
 # Remove outdated versions from the cellar.
 brew cleanup
