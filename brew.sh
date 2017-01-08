@@ -22,7 +22,6 @@ brew upgrade --all
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
-ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
@@ -52,24 +51,13 @@ brew install homebrew/dupes/screen
 brew install ffmpeg
 brew install mkvtoolnix
 
-# Install some CTF tools.
-brew install fcrackzip
-brew install foremost
-brew install john
-brew install knock
-brew install nmap
-brew install pngcheck
-brew install sqlmap
-
 # Install other useful binaries.
 brew install ack
 brew install git
 brew install imagemagick --with-webp
-brew install lua
+brew install python3
 brew install p7zip
 brew install tree
-brew install vbindiff
-brew install webkit2png
 
 # Install casks.
 brew tap caskroom/cask
