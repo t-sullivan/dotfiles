@@ -20,6 +20,7 @@ source symlink.sh
 ```
 
 ### OS X defaults
+Launch Sublime Text before running this script to create some necessary directories
 
 ```bash
 ./.osx
