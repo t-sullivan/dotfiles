@@ -1,6 +1,0 @@
-[submodule ".themes/iterm"]
-	path = .themes/iterm
-	url = https://github.com/dracula/iterm
-[submodule ".themes/sublime"]
-	path = .themes/sublime
-	url = https://github.com/dracula/sublime
