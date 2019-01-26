@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# ~/.macos — https://mths.be/macos
-
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
@@ -70,7 +68,7 @@ sudo systemsetup -setcomputersleep Off > /dev/null
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "jp"
+defaults write NSGlobalDomain AppleLanguages -array "en"
 defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
 defaults write NSGlobalDomain AppleMetricUnits -bool false
@@ -292,6 +290,18 @@ open "${HOME}/.themes/iterm/Dracula.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+###############################################################################
+# Sublime Text 3                                                              #
+###############################################################################
+
+# Set user settings
+subl_settings = "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+touch $sub_settings
+
+echo "{ \"color_scheme\": \"~/.colors/dracula.tmTheme\",
+	\"font_size\": 13}" >> $sub_settings
+
 
 ###############################################################################
 # Time Machine                                                                #
